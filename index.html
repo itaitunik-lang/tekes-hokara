@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>טקס הוקרה למערך המילואים בא"פ מרכז</title>
+
+  <!-- WhatsApp / social preview card -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="טקס הוקרה למערך המילואים בא&quot;פ מרכז · 29.06.2026">
+  <meta property="og:description" content="לחצו להוספת הטקס ליומן 📅 · 17:00–20:00">
+  <meta property="og:image" content="https://itaitunik-lang.github.io/tekes-hokara/invite.png">
+  <meta property="og:image:width" content="1054">
+  <meta property="og:image:height" content="1492">
+  <meta property="og:url" content="https://itaitunik-lang.github.io/tekes-hokara/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="טקס הוקרה למערך המילואים בא&quot;פ מרכז · 29.06.2026">
+  <meta name="twitter:image" content="https://itaitunik-lang.github.io/tekes-hokara/invite.png">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { min-height: 100%; }
+    body {
+      background: #f7f1e6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .wrap { width: 100%; max-width: 480px; text-align: center; }
+    .card {
+      display: block;
+      line-height: 0;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.18);
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .card img { width: 100%; height: auto; display: block; }
+    .btn {
+      display: inline-block;
+      margin-top: 22px;
+      padding: 15px 34px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      background: #b09662;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(176,150,98,0.4);
+      transition: transform .08s ease, background .15s ease;
+    }
+    .btn:hover { background: #9c8351; }
+    .btn:active { transform: scale(0.97); }
+    .sub { margin-top: 14px; color: #8a7d63; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="card" id="card" href="#" role="button" aria-label="הוספת הטקס ליומן">
+      <img src="invite.png" alt='טקס הוקרה למערך המילואים בא"פ מרכז · 29/06/2026'>
+    </a>
+    <br>
+    <button class="btn" id="btn">הוספה ליומן 📅</button>
+    <div class="sub">29.06.2026 · 17:00–20:00</div>
+  </div>
+
+  <script>
+    var EVENT_TITLE = 'טקס הוקרה למערך המילואים בא"פ מרכז';
+    var DATES = "20260629T170000/20260629T200000";
+
+    function googleUrl() {
+      var p = new URLSearchParams({
+        action: "TEMPLATE",
+        text: EVENT_TITLE,
+        dates: DATES,
+        ctz: "Asia/Jerusalem"
+      });
+      return "https://calendar.google.com/calendar/render?" + p.toString();
+    }
+
+    function addToCalendar() {
+      // Always open Google Calendar on every device (incl. iPhone).
+      window.open(googleUrl(), "_blank", "noopener");
+    }
+
+    document.getElementById("card").addEventListener("click", function (e) {
+      e.preventDefault(); addToCalendar();
+    });
+    document.getElementById("btn").addEventListener("click", addToCalendar);
+  </script>
+</body>
+</html>
